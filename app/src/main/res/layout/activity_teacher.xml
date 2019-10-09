@@ -45,7 +45,7 @@
         android:layout_marginRight="20dp"
         android:hint="@string/massege"
         android:ems="10"
-        android:inputType="textImeMultiLine"
+        android:inputType="textMultiLine"
          />
 
     <Button

@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,Teacher.class);
+                startActivity(in);
 
             }
         });
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,RegisterForm.class);
+                Intent in = new Intent(MainActivity.this,Student.class);
                 startActivity(in);
             }
         });

@@ -14,7 +14,7 @@
         android:layout_marginRight="20dp"
         android:layout_gravity="center"
         android:gravity="left"
-        android:textSize="30sp"
+        android:textSize="22sp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_weight="1"
@@ -23,15 +23,14 @@
 
     <TextView
         android:id="@+id/couserAppMassegeMassege"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_gravity="center"
-        android:gravity="left"
-        android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/massege" />
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="@string/massege"
+        android:textSize="18sp" />
 </LinearLayout>

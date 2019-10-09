@@ -2,10 +2,14 @@ package com.example.madsamplepaper;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -64,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(colMassege3,subject);
         cv.put(colMassege4,mg);
 
-        Long a = db.insert(tableUser,null,cv);
+        Long a = db.insert(tableMasseges,null,cv);
 
         if (a==-1){
             return false;
@@ -73,6 +77,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
+
+
+    public List readMaseges(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String [] projection = {colMassege1,colMassege2,colMassege3,colMassege4};
+        Cursor cr = db.query(tableMasseges,projection,null,null,null,null,null);
+
+        List mges = new ArrayList<>();
+        while (cr.moveToNext()) {
+            String mg = cr.getString(cr.getColumnIndexOrThrow(colMassege4));
+            mges.add(mg);
+        }
+
+        cr.close();
+        return mges;
+    }
+
+    public List readMasegesSub(){
+        SQLiteDatabase db = getReadableDatabase();
+
+        String [] projection = {colMassege1,colMassege2,colMassege3,colMassege4};
+        Cursor cr = db.query(tableMasseges,projection,null,null,null,null,null);
+
+        List mges = new ArrayList<>();
+        while (cr.moveToNext()) {
+            String mg = cr.getString(cr.getColumnIndexOrThrow(colMassege3));
+            mges.add(mg);
+        }
+
+        cr.close();
+        return mges;
+    }
+
+
 
 
 }
