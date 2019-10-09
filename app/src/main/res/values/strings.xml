@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MADSamplePaper</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="the_course_app">The Course App</string>
+    <string name="register_form">Register Form</string>
+    <string name="register">Register</string>
+    <string name="log_in">Log In</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="welcome_username">welcome username</string>
+    <string name="subject">Subject</string>
+    <string name="massege">Massege</string>
+    <string name="save">Save</string>
+</resources>
